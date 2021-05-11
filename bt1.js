@@ -1,0 +1,12 @@
+//let myname=prompt("Hi there, your name please");
+//alert(`Hi ${myname}, welcome`);
+//let first_name=prompt("Enter your first name");
+//let last_name=prompt("Enter your last name");
+//alert(`Hi ${last_name} ${first_name}`);
+//let a=prompt("Enter side length of the square");
+//alert(`The square area is ${a**2}`);
+//let r=prompt("Enter the radius of the circle");
+//alert(`The circle area is ${r**2*Math.PI}`);
+//let c=prompt("Enter the temprature in Celsius");
+//let f=c*9/5+ 32;
+//alert (`${c} (C) = ${f}(F)`);
