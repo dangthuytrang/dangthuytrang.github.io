@@ -121,14 +121,14 @@ for(let i = 1 ; i <= 8/2; i++){
 }
 //d. n 1’s and 0’s in total, consecutively, n entered by user
 let n= Number (prompt ("Enter n"));
-
-    for(let i = 1 ; i <= n/2; i++){
-        console.log(0);
-        console.log(1);
-        
-    }
-    console.log(0)
-
+for (let i=0; i<n; i++){
+if (i%2==0) {
+    console.log(0);
+} else{
+console.log(1);
+}
+}
+    
 
 // 8. Write a script to calculate the BMI (Body Mass Index) of a person
 let w = Number (prompt ("Your weight in kg?"));
