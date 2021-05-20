@@ -1,3 +1,45 @@
+//Phone number management program
+let initNumber = [036567321, 0987654251];
+isloop = true;
+while(isloop){
+let input = prompt("Enter your function : C/R/U/D/E");
+
+if (input === "C") {
+  let add = Number(prompt("add phone number : "));
+  initNumber.unshift(add);
+  console.table(initNumber);
+}
+else if (input === "D") {
+  let del = Number(prompt("Enter the index of phone number : "));
+  if (del < 0 || del >= initNumber.length) {
+    alert("Please other index :");
+  } else {
+    initNumber.splice(del, 1);
+    console.table(initNumber);
+  }
+}
+else if (input === "U") {
+    let update = Number(prompt("Enter the index of phone number : "));
+    if (update < 0 || update >= initNumber.length) {
+      alert("Please other index :");
+    } else {
+      let valueUpdate = Number(prompt("Enter value to update :"));
+      initNumber[update] = valueUpdate;
+      console.table(initNumber);
+    }
+  }
+  else if (input === "R") {
+    let read = Number(prompt("Enter the index of phone number : "));
+    console.log(initNumber[read]);
+  }else if(input === "E"){
+    alert("Exit the program");
+    isloop = false;
+  }else {
+    alert("C/R/U/D/E ?");
+  }
+}
+
+
 //1.Write a script to ask users enter a sequence of numbers, the Numbers are separated by commas, calculate the sum of the numbers and show it to users
 let Array = []
 let str = prompt("Enter a sequence of numbers, separated by commas (,)")
@@ -9,6 +51,7 @@ let sum = 0;
     }
 console.table(Array);
 alert(`The sum of them is ${sum}`)
+
 // 2. Write a script asking users to enter a sequence of numbers, the numbers are separated by commas, find the smallest number and log it out to users
 let Array = [];
 let str = prompt("Enter a sequence of numbers, separated by commas (,)");
@@ -22,6 +65,7 @@ for (let i=0; i < Array.length; i++){
 }
 console.table(Array);
 alert(`The smallest number is ${small}`)
+
 // 3. Create an array containing at least 5 numbers, then ask users enter a number, 
 // perform a search to look for the number in the array, if the number is found, 
 // tell user that with the index of it in the array, if not, also tell them no
