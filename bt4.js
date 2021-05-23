@@ -89,43 +89,6 @@ Providers: ${phone[i].providers}`)
 }
 
 //1.5 Search the products based on the wanted provider entered by users
-//  let getProviders = prompt("Enter provider:");
- 
- 
- 
-//  let provider = []
-//  for (let i = 0; i < phone.length; i++) {
-   
-
- 
-//     console.log('-----------------------------------');  
-//     index = provider.indexOf(getProviders) 
-//     if (index === -1){
-//         console.log("Not found");
-//     }
-//     else{
-        
-
-        
-//         console.log(`Name: ${phone[index].name}
-// Brand: ${phone[index].brand}
-// Price: ${phone[index].price}
-// Color: ${phone[index].color}
-// Category: ${phone[index].category}
-// Providers: ${phone[index].providers}`);
-        
-//     }
-// }
-
-
-
-//     if (getProviders === phone[i].providers) {
-//         console.log('-----------------------------------');
-//         for (let key in phone[i]) {
-//             console.log(`${key} : ${phone[i][key]}`);
-//         };
-//     };
-// };
 
 
 // 2. Write a script to store and process the learning tasks to become a front-end developer
