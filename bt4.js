@@ -191,9 +191,9 @@ else {
  for(let i = 0; i<task.length ; i++){
     
     if(task[i].Complete == true){
-    console.log(`${task[i].id}. [X] ${task[i].name}`)
+    console.log(`${i+1}. [X] ${task[i].name}`)
     }
     else{
-    console.log(`${task[i].id}. [ ] ${task[i].name}`)
+    console.log(`${i+1}. [ ] ${task[i].name}`)
     }
 }
