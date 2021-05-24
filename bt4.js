@@ -25,7 +25,6 @@ let phone = [
         price : 21490,
         color : 'gray',
         category : 'phone',
-
     },
     {
         id : 4,
@@ -35,13 +34,11 @@ let phone = [
         color : 'blue',
         category : 'phone'
     }
-
 ];
 for (let i=0; i<phone.length; i++){
     console.log('-----------------------------------')
     console.log(`Name: ${phone[i].name}
-Price: ${phone[i].price}`);
-    
+Price: ${phone[i].price}`); 
 }
 
 //1.2. Write a script printing/logging out the products with their number, 
@@ -89,6 +86,15 @@ Providers: ${phone[i].providers}`)
 }
 
 //1.5 Search the products based on the wanted provider entered by users
+let ProviderInput = prompt("Enter provider:");
+for (let i = 0; i < phone.length; i++) {
+    if (ProviderInput === phone[i].providers) {
+        console.log('-----------------------------------');
+        for (let key in phone[i]) {
+            console.log(`${key} : ${phone[i][key]}`);
+        }
+    }
+}
 
 
 // 2. Write a script to store and process the learning tasks to become a front-end developer
@@ -128,13 +134,9 @@ let task = [
 
 //2.2. Let users add new task
  let isLoop=true;
-while(isLoop){
-
-    
+while(isLoop){   
 let input = prompt("Enter your command (New, Delete, Update, Complete)");
-
 if (input === "new") {
- 
   let name =  prompt("Enter name");
   let id  = task.length + 1;
   let newObj = {
@@ -151,7 +153,6 @@ else if (input === "delete") {
     }
     else{
         task.splice(idInput,1);
-
         }
 }
 else if (input==="update"){
@@ -166,8 +167,7 @@ else if (input==="update"){
             name : newName,
             Complete: false,
         }
-        }
-        
+        }   
 }
 else if (input === "complete"){
     let idInput = Number(prompt("Enter position: "));
@@ -187,9 +187,7 @@ else {
     alert("(New, Delete, Update, Complete ?");
 }
 }
-
  for(let i = 0; i<task.length ; i++){
-    
     if(task[i].Complete == true){
     console.log(`${i+1}. [X] ${task[i].name}`)
     }
