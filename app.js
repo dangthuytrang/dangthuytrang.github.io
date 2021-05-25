@@ -1,6 +1,6 @@
 
 //Bài 1 : Cho 1 chuỗi str_input. Viết chương trình đảo ngược chuỗi và in ra kết quả.
-let string = "program"
+
 function reverseString(str){
     let newString = " ";
     for (let i = str.length - 1; i>=0; i--){
@@ -12,7 +12,7 @@ reverseString ('program');
 
 
 //Bài 2:
-let string = "this is test"
+
 function titleCase (string){
     return string.charAt(0).toUpperCase() + string.slice(1);
 }  
