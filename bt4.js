@@ -165,7 +165,6 @@ else if (input==="update"){
         
         task[idInput] = {
             name : newName,
-            Complete: false,
         }
         }   
 }
@@ -175,9 +174,7 @@ else if (input === "complete"){
         alert("Not found");
     }
     else{
-        let newName = task[idInput].name;
         task[idInput] = {
-            name : newName,
             Complete: true,
         }
     isLoop = false;
