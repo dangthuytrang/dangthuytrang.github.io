@@ -13,10 +13,17 @@ reverseString ('program');
 
 //Bài 2:
 
-function titleCase (string){
-    return string.charAt(0).toUpperCase() + string.slice(1);
-}  
-console.log(titleCase("this is Test"));
+function titleCase(str) {
+    let splitStr = str.toLowerCase().split(' ');
+    for (let i = 0; i < splitStr.length; i++) {
+        
+        splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);     
+    }
+    
+    return splitStr.join(' '); 
+ }
+ 
+ console.log(titleCase("hello trang"));
 
 //Bài 3
 function unique(array) {
@@ -127,5 +134,67 @@ let strDate = prompt ("Enter your date (dd/mm/yyyy)")
     }
 }
 checkDate(strDate)
+// Sửa bài:
+let day = Number(prompt("Enter day:"));
+let month = Number(prompt("Enter month:"));
+let year = Number(prompt("Enter year:"));
+
+switch (month) {
+    case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+        if (day > 0 && day <= 31) {
+            console.log(`${day}/${month}/${year} is valid date.`);
+            if (day === 31 && month === 12) {
+                console.log(`The next day is: ${day - 30}/01/${year + 1}`);
+            } else if (day === 31 && month < 12) {
+                console.log(`The next day is: ${day - 30}/${month + 1}/${year}`);
+            } else {
+                console.log(`The next day is: ${day + 1}/${month}/${year}`);
+            }
+        } else {
+            console.log(`${day}/${month}/${year} is invalid date.`);
+        }
+        break;
+    case 4: case 6: case 9: case 11:
+        if (day > 0 && day <= 30) {
+            console.log(`${day}/${month}/${year} is valid date.`);
+            if (day === 30) {
+                console.log(`The next day is: ${day - 29}/${month + 1}/${year}`);
+            } else {
+                console.log(`The next day is: ${day + 1}/${month}/${year}`);
+            }
+        } else {
+            console.log(`${day}/${month}/${year} is invalid date.`);
+        }
+        break;
+    case 2:
+        if (year % 400 === 0 || (year % 100 !== 0 && year % 4 === 0)) {
+            console.log(`${year} is a leap year`);
+            if (day > 0 && day <= 29) {
+                console.log(`${day}/${month}/${year} is valid date.`)
+                if (day === 29) {
+                    console.log(`The next day is: ${day - 28}/${month + 1}/${year}`);
+                } else {
+                    console.log(`The next day is: ${day + 1}/${month}/${year}`);
+                }
+            } else {
+                console.log(`${day}/${month}/${year} is invalid date.`);
+            }
+        } else {
+            console.log(`${year} is not a leap year`);
+            if (day > 0 && day <= 28) {
+                console.log(`${day}/${month}/${year} is valid date.`)
+                if (day === 28) {
+                    console.log(`The next day is: ${day - 27}/${month + 1}/${year}`);
+                } else {
+                    console.log(`The next day is: ${day + 1}/${month}/${year}`);
+                }
+            } else {
+                console.log(`${day}/${month}/${year} is invalid date.`);
+            }
+        }
+        break;
+    default:
+        break;
+}
 
 
