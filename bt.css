@@ -1,0 +1,47 @@
+.exs{
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 300px;
+}
+#content{
+    width: 150px; 
+    height: 150px; 
+    border: 1px; 
+    background: red; 
+    color:black;
+    margin-top: 15px;
+}
+#doi-mau{
+    width: 150px; 
+    height: 150px; 
+    border: 1px; 
+    color:black;
+    margin-top: 15px;
+    font-size: 14px;
+}
+#content1{
+    margin-top: 15px;
+    width: 100px;
+    height: 100px;
+    border: 1px;
+    background-color: aqua;
+}
+#content2{
+    margin-top: 15px;
+    width: 100px;
+    height: 100px;
+    border: 1px;
+    background-color: violet;
+}
+#fontsize{
+    margin-top: 15px;
+    width: 175px;
+    height: 150px;
+    border: 1px;
+    background-color: violet;
+    font-size: 14px;
+}
+
+
+
